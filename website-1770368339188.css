@@ -1,0 +1,156 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+    html { 
+      scroll-behavior: smooth;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      overflow-x: hidden;
+    }
+    body { 
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    ::-webkit-scrollbar { display: none; }
+    html.lenis, html.lenis body {
+      height: auto;
+    }
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+    .lenis.lenis-scrolling iframe {
+      pointer-events: none;
+    }
+  
+
+    .hdr {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 4rem;
+      background: rgba(31,41,55,0.6);
+      backdrop-filter: blur(12px);
+      transition: background 0.3s ease;
+    }
+    .hdr-logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #EF4444;
+      text-decoration: none;
+    }
+    .hdr-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .hdr-nav-menu {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .hdr-nav-item a {
+      font-size: 1.125rem;
+      color: #F3F4F6;
+      text-decoration: none;
+      transition: color 0
+
+/* Layout & Spacing */
+.hdr{display:flex;justify-content:space-between;align-items:center;padding:2rem 4rem;background:#111;color:#fff;}
+.hdr .logo{font-size:2rem;font-weight:700;letter-spacing:-0.5px;}
+.hdr .nav-list{display:flex;gap:2rem;list-style:none;margin:0;padding:0;}
+.hdr .nav-list li a{color:#fff;text-decoration:none;font-size:1rem;transition:color .3s;}
+.hdr .nav-list li a:hover{color:#ff6f00;}
+.hdr .nav-toggle{display
+
+/* Layout containers */
+.layHeader{display:flex;justify-content:space-between;
+
+    .sg-header{display:flex;justify-content:space-between;align-items:center;padding:2rem 4rem;background:#111;color:#fff}
+    .sg-logo{font-size:2rem;font-weight:700;color:#e63946}
+    .sg-nav{display:flex;gap:2rem}
+    .sg-nav a{color:#fff;text-decoration:none;font-size:1rem;transition:color .3s}
+    .sg-nav a:hover{color:#e63946}
+    .sg-menu-toggle{display:none;font-size:1.5rem;color:#fff;cursor:pointer}
+    .sg-hero{padding:6rem 4rem;background:url('https://picsum.photos/1600/900?random=1') center/cover no-repeat;color:#fff;position:relative}
+    .sg-hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.5)}
+    .sg-hero-content{position:relative;max-width:800px;margin:auto
+
+        .page {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #fff;
+            line-height: 1.5;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 4rem;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .nav-list {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-item a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: opacity .3s;
+        }
+        .nav-item a:hover {
+            opacity: .8;
+        }
+        .nav-toggle {
+            display: none;
+            font-size:
+
+        .page-body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+        }
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 4rem;
+            background: linear-gradient(135deg, #004e92, #000428);
+            color: #fff;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #fff;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            font-size: 1.125rem;
+        }
+        .nav-item {
+            color: #fff;
+            text-decoration: none;
+            transition: color .3s ease;
+        }
+        .nav-item:hover {
+            color: #ffdd57;
+        }
+        .hamburger {
+            display: none;
