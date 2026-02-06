@@ -1,0 +1,70 @@
+.dog-body *{margin:0;padding:0;box-sizing:border-box}
+        .dog-body{font-family:system-ui,sans-serif;background:#fafafa;color:#1F2937;overflow-x:hidden}
+        .dog-header{position:relative;display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1.5rem;background:rgba(255,255,255,0.6);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,0.1);z-index:1000}
+        .dog-logo{font-size:1.5rem;font-weight:700;color:#A855F7;text-decoration:none}
+        .dog-nav{display:flex;gap:1.5rem}
+        .dog-nav a{color:#1F2937;text-decoration:none;font-weight:500;position:relative;transition:color .3s cubic-bezier(0.4,0,0.2,1)}
+        .dog-nav a:hover{color:#EC4899}
+        .dog-nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:#EC4899;transition:width .3s cubic-bezier(0.4,0,0.2,1)}
+        .dog-nav a:hover::after{width:100%}
+        .dog-toggle{display:none;cursor:pointer;width:2rem;height:2rem}
+        .dog-toggle svg{width:100%;height:100%;fill:#1F2937}
+        .dog-nav-panel{position:fixed;top:0;right:-100%;width:70%;max-width:280px;height:100vh;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);box-shadow:-4px 0 12px rgba(0,0,0,0.15);padding:4rem 1.5rem;display:flex;flex-direction:column;gap:1.5rem;transition:right .4s cubic-bezier(0.4,0,0.2,1)}
+        #dog-menu-toggle:checked~.dog-nav-panel{right:0}
+        .dog-nav-panel a{font-size:1.125rem;color:#1F2937;text-decoration:none}
+        .dog-hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 1rem;background:linear-gradient(135deg,#A855F7,#EC4899);color:#fff}
+        .dog-hero h1{font-size:2.5rem;margin-bottom:.5rem}
+        .dog-hero p{font-size:1.125rem;margin-bottom:1.5rem}
+        .dog-cta{display:inline-flex;align-items:center;gap:.5rem;background:#fff;color:#A855F7;padding:.75rem 1.5rem;border-radius:9999px;text-decoration:none;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.1);transition:transform .3s cubic-bezier(0.4,0,0.2,1),box-shadow .3s}
+        .dog-cta:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,0.15)}
+        .hero-section{position:relative;display:flex;flex-wrap:wrap;overflow:hidden;min-height:100vh}
+        .hero-content{flex:1 1 50%;display:flex;flex-direction:column;justify-content:center;padding:2rem;z-index:2;clip-path:polygon(0 0,100% 0,100% 85%,0 100%);background:linear-gradient(135deg,#A855F7,#EC4899);color:#fff;transition:transform .5s cubic-bezier(0.4,0,0.2,1)}
+        .hero-content h1{font-size:2.5rem;margin:0 0 .5rem;transition:transform .5s}
+        .hero-content p{font-size:1.2rem;margin-bottom:1.5rem}
+        .hero-cta-btn{display:inline-flex;align-items:center;padding:.75rem 1.5rem;background:#fff;color:#A855F7;border:none;border-radius:9999px;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.1);transition:background .3s,transform .3s}
+        .hero-cta-btn:hover{background:#f0f0f0;transform:translateY(-2px)}
+        .hero-image{flex:1 1 50%;position:relative;z-index:1;clip-path:polygon(0 15%,100% 0,100% 100%,0 100%)}
+        .hero-img{width:100%;height:100%;object-fit:cover;display:block}
+        .dogshop-wrapper{max-width:1200px;margin:0 auto;padding:3rem 1rem;display:flex;flex-direction:column;align-items:center;gap:2rem}
+        .dogshop-heading{font-size:2.5rem;font-weight:700;color:#4B0082;text-align:center}
+        .dogshop-features{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;width:100%}
+        .dogshop-card{background:linear-gradient(135deg,rgba(168,85,247,0.9),rgba(236,72,153,0.9));border-radius:1rem;padding:2rem;width:260px;backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.3);box-shadow:0 12px 24px rgba(0,0,0,0.08);transition:transform .4s cubic-bezier(0.4,0,0.2,1),box-shadow .4s cubic-bezier(0.4,0,0.2,1);color:#fff}
+        .dogshop-card:hover{transform:translateY(-12px);box-shadow:0 20px 40px rgba(0,0,0,0.15)}
+        .dogshop-icon{font-size:2.5rem;margin-bottom:1rem;display:block;text-align:center}
+        .dogshop-title{font-size:1.25rem;font-weight:600;text-align:center;margin-bottom:.75rem}
+        .dogshop-text{font-size:.95rem;line-height:1.4;text-align:center;opacity:.9}
+        .cta-diagonal{position:relative;overflow:hidden;width:90%;max-width:800px;margin:80px auto;border-radius:20px;background:linear-gradient(135deg,#A855F7,#EC4899);color:#fff;display:flex;align-items:center;justify-content:center;min-height:300px}
+        .cta-diagonal::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:rgba(255,255,255,0.08);transform:rotate(12deg);pointer-events:none}
+        .cta-content{position:relative;text-align:center;padding:20px;max-width:70%}
+        .cta-headline{font-size:2rem;font-weight:700;margin-bottom:.5rem}
+        .cta-text{font-size:1rem;margin-bottom:1.5rem;line-height:1.4}
+        .diag-cta-btn{display:inline-flex;align-items:center;gap:.5rem;background:#fff;color:#A855F7;padding:.75rem 1.5rem;border:none;border-radius:999px;font-weight:600;text-decoration:none;transition:background .3s cubic-bezier(0.4,0,0.2,1),transform .3s cubic-bezier(0.4,0,0.2,1)}
+        .diag-cta-btn:hover{background:#f0e6ff;transform:translateY(-3px)}
+        .dog-footer{padding:3rem 1.5rem;background:linear-gradient(135deg,#F97316,#EF4444);color:#fff;display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;border-top:1px solid rgba(255,255,255,0.2);font-family:system-ui,sans-serif}
+        .footer-column{flex:1 1 150px;min-width:200px}
+        .footer-title{font-size:1.2rem;margin-bottom:.8rem;font-weight:600}
+        .footer-link{display:block;color:rgba(255,255,255,.85);text-decoration:none;margin:.3rem 0;transition:color .3s cubic-bezier(0.4,0,0.2,1)}
+        .footer-link:hover{color:#fff}
+        .newsletter-form{display:flex;flex-direction:column;max-width:300px}
+        .newsletter-input{padding:.6rem .8rem;border:none;border-radius:4px;margin-bottom:.5rem}
+        .newsletter-button{padding:.6rem;background:rgba(255,255,255,.2);border:none;color:#fff;cursor:pointer;border-radius:4px;transition:background .3s cubic-bezier(0.4,0,0.2,1)}
+        .newsletter-button:hover{background:rgba(255,255,255,.4)}
+        .social-links{display:flex;gap:.8rem;margin-top:1rem}
+        .social-link{color:#fff;font-size:1.5rem;transition:transform .3s cubic-bezier(0.4,0,0.2,1)}
+        .social-link:hover{transform:translateY(-3px)}
+        @media (max-width:768px){
+            .dog-nav{display:none}
+            .dog-toggle{display:block}
+            .hero-section{flex-direction:column}
+            .hero-content,.hero-image{flex:1 1 100%;clip-path:none}
+            .hero-content{padding:1.5rem}
+            .hero-content h1{font-size:2rem}
+            .dogshop-card{width:90%}
+        }
+        @media (max-width:600px){
+            .cta-headline{font-size:1.5rem}
+            .cta-text{font-size:.9rem}
+            .dog-footer{flex-direction:column;align-items:center}
+            .footer-column{margin-bottom:1.5rem}
+            .newsletter-form{width:100%}
+        }
