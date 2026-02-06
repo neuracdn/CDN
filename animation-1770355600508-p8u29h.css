@@ -1,0 +1,45 @@
+.neura-container{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background:linear-gradient(135deg,#f0f4ff,#e6f0ff);
+        }
+        .neura-3d-button{
+            position:relative;
+            padding:1rem 2rem;
+            font-size:1.2rem;
+            font-weight:600;
+            color:#fff;
+            border:none;
+            border-radius:12px;
+            background:linear-gradient(135deg,#ff7e5f,#feb47b);
+            cursor:pointer;
+            transition:transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1);
+            box-shadow:0 8px 15px rgba(0,0,0,0.2);
+            overflow:hidden;
+        }
+        .neura-3d-button::before{
+            content:"";
+            position:absolute;
+            inset:0;
+            border-radius:12px;
+            background:rgba(255,255,255,0.2);
+            backdrop-filter:blur(8px);
+            z-index:-1;
+            transition:opacity 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
+        .neura-3d-button:hover{
+            transform:translateY(-6px) rotateX(10deg) rotateY(10deg);
+            box-shadow:0 12px 25px rgba(0,0,0,0.3);
+        }
+        .neura-3d-button:active{
+            transform:translateY(2px) rotateX(0deg) rotateY(0deg);
+            box-shadow:0 4px 8px rgba(0,0,0,0.2);
+        }
+        @media (max-width:600px){
+            .neura-3d-button{
+                font-size:1rem;
+                padding:0.8rem 1.5rem;
+            }
+        }
