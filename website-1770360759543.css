@@ -1,0 +1,420 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+    html { 
+      scroll-behavior: smooth;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      overflow-x: hidden;
+    }
+    body { 
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    ::-webkit-scrollbar { display: none; }
+    html.lenis, html.lenis body {
+      height: auto;
+    }
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+    .lenis.lenis-scrolling iframe {
+      pointer-events: none;
+    }
+  
+
+.sport-page{background:#F5F5F5;min-height:100vh;display:flex;flex-direction:column;align-items:center;}
+.sport-header{width:100%;max-width:1200px;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(31,41,55,0.6);backdrop-filter:blur(12px);border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.2);margin-top:2rem;}
+.sport-logo{font-size:1.5rem;font-weight:700;color:#EF4444;display:flex;align-items:center;gap:0.5rem;}
+.sport-logo svg{width:24px;height:24px;fill:#EF4444;}
+.sport-nav{display:flex;align-items:center;gap:1.5rem;}
+.sport-nav-list{list-style:none;display:flex;gap:1.5rem;margin:0;padding:0;}
+.sport-nav-item{position:relative;}
+.sport-nav-link{text-decoration:none;color:#F3F4F6;font-weight:500;transition:color .3s cubic-bezier(0.4,0,0.2,1);}
+.sport-nav-link:hover{color:#EF4444;}
+.sport-dropdown-content{display:none;position:absolute;top:120%;left:0;background:#1F2937;min-width:180px;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.15);}
+.sport-dropdown-content a{display:block;padding:0.75rem 1rem;color:#F3F4F6;text-decoration:none;transition:background .25s;}
+.sport-dropdown-content a:hover{background:#EF4444;color:#fff;}
+.sport-nav-item:hover .sport-dropdown-content{display:block;}
+.sport-cta{background:#EF4444;color:#fff;padding:0.5rem 1rem;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:background .3s cubic-bezier(0.4,0,0.2,1);}
+.sport-cta:hover{background:#F97316;}
+@media (max-width:768px){
+.sport-header{flex-direction:column;align-items:flex-start;gap:1rem;}
+.sport-nav{width:100%;justify-content:space-between;}
+.sport-nav-list{flex-direction:column;width:100%;gap:0.5rem;}
+.sport-nav-item{width:100%;}
+.sport-dropdown-content{position:static;top:auto;left:auto;background:#1F2937;box-shadow:none;}
+}
+
+
+        .hero-split{
+            display:flex;
+            max-width:1200px;
+            margin:40px auto;
+            background:#fff;
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow:0 12px 30px rgba(0,0,0,0.12);
+        }
+        .hero-left{
+            flex:1;
+            position:relative;
+            overflow:hidden;
+        }
+        .hero-img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            transition:transform 0.8s cubic-bezier(0.4,0,0.2,1);
+        }
+        .hero-left:hover .hero-img{
+            transform:scale(1.07);
+        }
+        .hero-right{
+            flex:1;
+            padding:3rem 2.5rem;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            background:linear-gradient(135deg, #EF4444, #F97316);
+            color:#fff;
+            gap:1rem;
+        }
+        .hero-title{
+            font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size:2.8rem;
+            margin:0;
+            line-height:1.2;
+        }
+        .hero-sub{
+            font-size:1.125rem;
+            line-height:1.6;
+            margin:0;
+        }
+        .hero-cta{
+            display:inline-flex;
+            align-items:center;
+            gap:0.6rem;
+            padding:0.9rem 1.8rem;
+            background:rgba(255,255,255,0.15);
+            color:#fff;
+            text-decoration:none;
+            border-radius:8px;
+            backdrop-filter:blur(8px);
+            transition:background 0.3s ease, transform 0.3s ease;
+        }
+        .hero-cta:hover{
+            background:rgba(255,255,255,0.25);
+            transform:translateY(-4px);
+        }
+        .cta-icon{
+            width:1.2em;
+            height:1.2em;
+            fill:currentColor;
+        }
+        @media (max-width:768px){
+            .hero-split{
+                flex-direction:column;
+                margin:20px;
+            }
+            .hero-right{
+                padding:2rem 1.5rem;
+            }
+            .hero-title{
+                font-size:2.2rem;
+            }
+        }
+    
+
+        .animation-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(260px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+        }
+        .feature-card {
+            position: relative;
+            padding: 2rem 1.5rem;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, #EF4444, #F97316);
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .feature-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+        }
+        .feature-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            pointer-events: none;
+        }
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+            fill: #fff;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .card-description {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(2, minmax(200px, 1fr));
+            }
+        }
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+
+        .sport-quote-section{
+            max-width:1200px;
+            margin:0 auto;
+            padding:2rem;
+            display:grid;
+            gap:2rem;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+        }
+        .sport-quote-card{
+            background:rgba(255,255,255,0.07);
+            border-radius:1rem;
+            padding:2rem;
+            color:#fff;
+            position:relative;
+            overflow:hidden;
+            box-shadow:0 8px 32px 0 rgba(0,0,0,0.37);
+            backdrop-filter:blur(8px);
+            -webkit-backdrop-filter:blur(8px);
+            border:1px solid rgba(255,255,255,0.18);
+            transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
+        .sport-quote-card:hover{
+            transform:translateY(-10px);
+        }
+        .sport-avatar{
+            width:64px;
+            height:64px;
+            border-radius:50%;
+            border:2px solid #EF4444;
+            object-fit:cover;
+        }
+        .sport-header{
+            display:flex;
+            align-items:center;
+            gap:1rem;
+        }
+        .sport-name{
+            font-weight:600;
+            color:#EF4444;
+            margin:0;
+        }
+        .sport-role{
+            font-size:0.9rem;
+            color:#d1d5db;
+            margin:0;
+        }
+        .sport-quote-text{
+            font-size:1.1rem;
+            line-height:1.6;
+            margin-top:1rem;
+            position:relative;
+        }
+        .sport-quote-text::before{
+            content:"\201C";
+            font-size:3rem;
+            position:absolute;
+            left:-0.5rem;
+            top:-0.5rem;
+            color:#EF4444;
+            opacity:0.3;
+        }
+        .sport-stars{
+            margin-top:0.5rem;
+            color:#EF4444;
+            font-size:1rem;
+        }
+    
+
+        .cta-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .cta-card {
+            background: linear-gradient(135deg, #EF4444, #F97316);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            padding: 40px 30px;
+            max-width: 420px;
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transform: translateY(-15px);
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .cta-card:hover {
+            transform: translateY(-25px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+        }
+        .cta-headline {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .cta-headline:hover {
+            color: #fff9c4;
+        }
+        .cta-text {
+            font-size: 1rem;
+            margin-bottom: 25px;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+            backdrop-filter: blur(5px);
+            transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .cta-button:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-3px);
+        }
+        .cta-button i {
+            margin-right: 8px;
+            font-style: normal;
+        }
+        .cta-button i::before {
+            content: "🚀";
+        }
+        @media (max-width: 480px) {
+            .cta-card {
+                padding: 30px 20px;
+            }
+            .cta-headline {
+                font-size: 1.6rem;
+            }
+        }
+    
+
+        .sport-footer{
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: linear-gradient(135deg, #1E3A8A, #EF4444);
+            color: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            backdrop-filter: blur(8px);
+        }
+        .footer-grid{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+        .footer-col{
+            flex: 1 1 200px;
+        }
+        .footer-title{
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .footer-link{
+            display: block;
+            margin: 0.35rem 0;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+        .footer-link:hover{
+            color: #fff;
+        }
+        .newsletter-form{
+            display: flex;
+            margin-top: 1rem;
+        }
+        .newsletter-input{
+            flex: 1;
+            padding: 0.5rem 0.75rem;
+            border: none;
+            border-radius: 0.5rem 0 0 0.5rem;
+            outline: none;
+        }
+        .newsletter-button{
+            padding: 0.5rem 1rem;
+            border: none;
+            background: #fff;
+            color: #1E3A8A;
+            border-radius: 0 0.5rem 0.5rem 0;
+            cursor: pointer;
+            transition: background 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+        .newsletter-button:hover{
+            background: #f0f0f0;
+        }
+        .social-links{
+            margin-top: 1.5rem;
+        }
+        .social-icon{
+            margin-right: 0.75rem;
+            font-size: 1.5rem;
+            color: #fff;
+            transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+            text-decoration: none;
+        }
+        .social-icon:hover{
+            transform: scale(1.2);
+        }
+        @media (max-width: 600px){
+            .footer-grid{
+                flex-direction: column;
+            }
+            .footer-col{
+                margin-bottom: 1rem;
+            }
+        }
