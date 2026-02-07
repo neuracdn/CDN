@@ -1,0 +1,42 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { overflow-x: hidden; }
+        header { background-color: #92400e; color: #fff; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .section-padding { padding: 4rem 1.5rem; }
+        .hero { background: url('https://picsum.photos/seed/petfood/1920/600') center/cover no-repeat; color: #fff; text-align: center; padding: 8rem 1.5rem; }
+        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+        .btn { display: inline-block; background-color: #ea580c; color: #fff; padding: 0.8rem 1.5rem; border-radius: 0.4rem; font-weight: 600; transition: background 0.3s; }
+        .btn:hover { background-color: #c0390c; }
+        .features { background-color: #fef3c7; }
+        .features .grid-cols-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        .feature-card { background: #fff; padding: 2rem; border-radius: 0.5rem; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        .feature-card i { font-size: 2.5rem; color: #92400e; margin-bottom: 1rem; }
+        .feature-card h3 { font-weight: 600; margin-bottom: 0.5rem; }
+        .testimonials { background-color: #fff; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .testimonial { background: #f9f9f9; padding: 1.5rem; border-radius: 0.5rem; text-align: center; }
+        .testimonial img { width: 60px; height: 60px; border-radius: 50%; margin-bottom: 1rem; }
+        .testimonial p { font-style: italic; margin-bottom: 1rem; }
+        .testimonial .author { font-weight: 600; color: #92400e; }
+        .cta { background-color: #92400e; color: #fff; text-align: center; padding: 3rem 1.5rem; }
+        .cta h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .footer { background-color: #222; color: #fff; padding: 2rem 0; text-align: center; }
+        .footer a { color: #fef3c7; margin: 0 0.5rem; text-decoration: none; }
+        /* RESPONSIVE CRITICAL */
+        @media (max-width: 768px) {
+            .desktop-nav { display: none !important; }
+            .mobile-menu-btn { display: block !important; }
+            .section-padding { padding: 3rem 1.5rem !important; }
+            .hero-title { font-size: 2.5rem !important; }
+            .grid-cols-4 { grid-template-columns: repeat(2, 1fr) !important; }
+            .grid-cols-3 { grid-template-columns: 1fr !important; }
+        }
+        @media (max-width: 480px) {
+            .grid-cols-4, .grid-cols-2 { grid-template-columns: 1fr !important; }
+            .hero-title { font-size: 2rem !important; }
+        }
+        /* Mobile menu toggle */
+        #mobile-menu-btn { display: none; cursor: pointer; font-size: 1.5rem; position: absolute; right: 1rem; top: 1rem; }
+        #mobile-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #92400e; flex-direction: column; }
+        #mobile-menu a { padding: 1rem; color: #fff; }
