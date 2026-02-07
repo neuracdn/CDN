@@ -1,0 +1,577 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+    html { 
+      scroll-behavior: smooth;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      overflow-x: hidden;
+    }
+    body { 
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    ::-webkit-scrollbar { display: none; }
+    html.lenis, html.lenis body {
+      height: auto;
+    }
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+    .lenis.lenis-scrolling iframe {
+      pointer-events: none;
+    }
+  
+
+        :root {
+            --primary-color: #3B82F6;
+            --secondary-color: #6B7280;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-right: 2rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin-right: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #2E6CFA;
+        }
+
+        .hamburger-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: none;
+        }
+
+        .nav-menu-mobile {
+            position: absolute;
+            top: 4rem;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            padding: 1rem;
+            display: none;
+        }
+
+        .nav-menu-mobile li {
+            margin-bottom: 1rem;
+        }
+
+        .nav-menu-mobile a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .nav-menu-mobile a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hamburger-icon {
+                display: block;
+            }
+
+            .nav-menu-mobile {
+                display: block;
+            }
+        }
+    
+
+        /* Global Styles */
+        :root {
+            --primary-color: #3B82F6;
+            --secondary-color: #6B7280;
+            --spacing: 4rem;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(https://picsum.photos/1600/900?random=1770445126210);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            z-index: 1;
+            text-align: center;
+            color: var(--secondary-color);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000";
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000";
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.25rem;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000";
+        }
+
+        .cta-btn:hover {
+            background-color: #3498db;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+    
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 4rem;
+    }
+    
+    .feature-card {
+      background-color: #ffffff;
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .feature-card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    .feature-icon {
+      font-size: 2rem;
+      color: #3B82F6;
+      margin-bottom: 1rem;
+    }
+    
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    
+    .feature-description {
+      font-size: 1rem;
+      color: #6B7280;
+    }
+  
+
+    .testimonials {
+      padding: 4rem;
+      background-color: #f9f9f9;
+    }
+    .testimonials .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .testimonials .quote-block {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+    .testimonials .quote-block .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+    .testimonials .quote-block .quote {
+      font-size: 1.125rem;
+      color: #6B7280;
+    }
+    .testimonials .quote-block .rating {
+      color: #3B82F6;
+    }
+    .testimonials .quote-block .rating .star {
+      margin-right: 0.5rem;
+    }
+    .testimonials .quote-block .info {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+    .testimonials .quote-block .info .name {
+      font-weight: bold;
+      color: #3B82F6;
+    }
+    .testimonials .quote-block .info .role {
+      color: #6B7280;
+    }
+    @media (max-width: 768px) {
+      .testimonials .container {
+        padding: 0 1rem;
+      }
+    }
+  </img>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+  <section class="testimonials" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+    <div class="container">
+      <div class="quote-block">
+        <div class="quote">
+          "The team did an amazing job creating our landing page. They were professional, communicative, and delivered high-quality results. We couldn't be happier with the outcome."
+        </div>
+        <div class="info">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=3">
+          <div>
+            <div class="name">Emily Chen</div>
+            <div class="role">Marketing Manager</div>
+          </div>
+        </div>
+        <div class="rating">
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></i>
+        </2rem>
+      </div>
+      <div class="quote-block">
+        <div class="quote">
+          "I was blown away by the service quality and professionalism of the team. They listened to our needs and delivered a landing page that exceeded our expectations."
+        </div>
+        <div class="info">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=3">
+          <div>
+            <div class="name">David Lee</div>
+            <div class="role">CEO</div>
+          </div>
+        </div>
+        <div class="rating">
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></i>
+        </div>
+      </div>
+      <div class="quote-block">
+        <div class="quote">
+          "The team achieved amazing results with our landing page. They helped us increase conversions and improve our online presence. Highly recommended!"
+        </div>
+        <div class="info">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=3">
+          <div>
+            <div class="name">Sarah Kim</div>
+            <div class="role">Product Manager</div>
+          </div>
+        </div>
+        <div class="rating">
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></=" 
+      </div> 
+    </div>
+  </section>
+</body>
+</html>
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .cta-section {
+      position: relative;
+      padding: 6rem 0;
+      text-align: center;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://picsum.photos/1920/600?random=1770445126310);
+      background-size: cover;
+      background-position: center;
+    }
+    .cta-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+    }
+    .cta-headline {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #3B82F6;
+    }
+    .cta-supporting-text {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: #6B7280;
+    }
+    .cta-button {
+      background-color: #3B82F6;
+      color: #fff;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.25rem;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #2E6AC4;
+    }
+    .cta-button i {
+      margin-left: 0.5rem;
+      font-size: 1rem;
+    }
+    @media (max-width: 768px) {
+      .cta-headline {
+        font-size: 2.5rem;
+      }
+      .cta-supporting-text {
+        font-size: 1rem;
+      }
+    }
+  
+
+    /* Global Styles */
+    :root {
+      --primary-color: #3B82F6;
+      --secondary-color: #6B7280;
+    }
+
+    /* Footer Styles */
+    .footer {
+      background-color: var(--secondary-color);
+      color: #fff;
+      padding: 4rem;
+      display: flex;
+      justify-content: content;
+    }
+
+    .footer-columns {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+    .footer-column {
+      flex-basis: 30%;
+      margin: 0 2rem;
+    }
+
+    .footer-column h3 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column li {
+      margin-bottom: 1rem;
+    }
+
+    .footer-column a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-column a:hover {
+      color: var(--primary-color);
+    }
+
+    .newsletter-signup {
+      margin-top: 2rem;
+    }
+
+    .newsletter-signup input {
+      padding: 1rem;
+      width: 100%;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+    }
+
+    .social-media-icons {
+      margin-top: 2rem;
+    }
+
+    .social-media-icons i {
+      margin: 0 1rem;
+      color: #fff;
+    }
+
+    .social-media-icons i:hover {
+      color: var(--primary-color);
+    }
+
+    .copyright-text {
+      margin-top: 2rem;
+      color: #fff;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .footer-columns {
+        flex-direction: column;
+      }
+
+      .footer-column {
+        flex-basis: 100%;
+        margin: 0;
+      }
+    }
+  </aOS>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<body>
+  <footer class="footer" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>Landing Page</h3>
+        <ul>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+        </ul>
+      </div>
+      <div class: "footer-column" 
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="#">Blog</a></a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Careers</a></li>
+        </div>
+        <div class="newsletter-signup">
+          <input type="email" placeholder="Email">
+          <button>Subscribe</button>
+        </div>
+        <div class="social-media-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+        <div class="copyright-text">
+          <p>&copy 2024 
+        </div>
+      </div> 
+    </div>
+  </footer>
+ </body>
+</html>
