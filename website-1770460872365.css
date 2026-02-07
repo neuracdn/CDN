@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #f1c40f;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 4rem;
+            text-align: 
+            center;
+        }
+        .header .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .header .nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: 
+            space-between;
+        }
+        .header .nav li {
+            margin-right: 2rem;
+        }
+        .header .nav a {
+            color: #fff;
+            text-decoration: 
+            none;
+        }
+        .header .nav .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            margin-right: 
+            1rem;
+        }
+        .hero {
+            background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            background-size: 1600px 900px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: 
+            center;
+            color: #fff;
+            padding: 4rem;
+        }
+        .hero .content {
+            text-align: 
+            center;
+        }
+        .hero .headline {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        .hero .subheadline {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .hero .cta {
+            background-color: 
+            var(--dark-color);
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 0.5rem;
+        }
+        .features {
+            padding: 4rem;
+        }
+        .features .cards {
+            display: 
+            grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .features .card {
+            background-color: #fff;
+            padding: 2rem;
+            border: 1px solid #ddd;
+            border-radius: 
+            0.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, <i class="fas fa-rocket">
+                0.1);
+        }
+        .features .card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        .features .card .title {
+            font-size: 
+            1.5rem;
+            margin-bottom: 1rem;
+        }
+        .features .card .description {
+            font-size: 1rem;
+        }
+        .testimonials {
+            background-color: var(--light-color);
+            padding: 4rem;
+        }
+        .testimonials .testimonial {
+            background-color: #fff;
+            padding: 2rem;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .testimonials .testimonial .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        .testimonials .testimonial .name {
+            font-size: 1.5rem;
+            margin-bottom: 
+            0.5rem;
+        }
+        .testimonials .testimonial .rating {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        .testimonials .testimonial .text {
+            font-size: 
+            1rem;
+        }
+        .cta-section {
+            background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            padding: 4rem;
+            text-align: center;
+            color: 
+            #fff;
+        }
+        .cta-section .headline {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        .cta-section .button {
+            background-color: var(--dark-color);
+            color: #fff;
+            border: 
+            none;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 0.5rem;
+        }
+        .footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 
+            4rem;
+        }
+        .footer .columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .footer .column {
+            margin-bottom: 2rem;
+        }
+        .footer .column .title {
+            font-size: 
+            1.5rem;
+            margin-bottom: 1rem;
+        }
+        .footer .column .links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .footer .column .links li {
+            margin-bottom: 
+            0.5rem;
+        }
+        .footer .column .links a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer .social {
+            margin-top: 2rem;
+        }
+        .footer .social i {
+            margin-right: 
+            1rem;
+        }
+        @media (max-width: 768px) {
+            .header .nav {
+                display: none;
+            }
+            .header .nav.active {
+                display: block;
+            }
+            .header .hamburger {
+                display: 
+                block;
+            }
+            .features .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
