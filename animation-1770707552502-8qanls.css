@@ -1,0 +1,83 @@
+body {
+						background-color: white; /* Ensure the iframe has a white background */
+					}
+				
+
+
+  body {
+    background-color: #f2f2f2;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loader-container {
+    position: relative;
+    width: 60px;
+    height: 80px;
+  }
+
+  .shape {
+    width: 50px;
+    height: 50px;
+    background-color: #FF8085;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    animation: bounce-tilt 1.4s ease-in-out infinite;
+  }
+
+  .shadow {
+    width: 50px;
+    height: 12px;
+    background-color: #FFCDD2;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    animation: shadow-scale 1.4s ease-in-out infinite;
+  }
+
+  @keyframes bounce-tilt {
+    0% {
+      transform: translateY(0) rotate(45deg);
+    }
+    25% {
+      transform: translateY(-30px) rotate(35deg);
+    }
+    50% {
+      transform: translateY(0) rotate(45deg);
+    }
+    75% {
+      transform: translateY(-30px) rotate(55deg);
+    }
+    100% {
+      transform: translateY(0) rotate(45deg);
+    }
+  }
+
+  @keyframes shadow-scale {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    25% {
+      transform: scale(0.6);
+      opacity: 0.4;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    75% {
+      transform: scale(0.6);
+      opacity: 0.4;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+  }
