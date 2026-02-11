@@ -1,0 +1,28 @@
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .modern-button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #2f4f7f, #3a5b94);
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .modern-button:hover {
+            transform: scale(1.05);
+        }
+        .modern-button:active {
+            transform: scale(0.95);
+        }
