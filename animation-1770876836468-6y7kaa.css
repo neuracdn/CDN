@@ -1,0 +1,68 @@
+.cyberpunk-button {
+      position: relative;
+      background-color: #1a1d23;
+      border: 2px solid #08f7fe;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .cyberpunk-button::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #08f7fe, #ff69b4, #32cd32);
+      background-size: 400% 400%;
+      z-index: -1;
+      border-radius: 12px;
+      animation: glow 10s ease infinite;
+    }
+
+    .cyberpunk-button:hover {
+      background-color: #2f343a;
+      box-shadow: 0 0 10px #08f7fe, 0 0 20px #ff69b4, 0 0 30px #32cd32;
+    }
+
+    .cyberpunk-button:hover::before {
+      animation: glow 5s ease infinite;
+    }
+
+    @keyframes glow {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .scanlines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+      background-size: 100% 10px;
+      opacity: 0.5;
+      animation: scan 5s linear infinite;
+    }
+
+    @keyframes scan {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 0 10000px;
+      }
+    }
