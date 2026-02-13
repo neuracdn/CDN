@@ -1,0 +1,29 @@
+.feature-card {
+            border-radius: 20px;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            margin: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card:hover {
+            border-color: #6c757d;
+        }
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 190, 190, 0.5);
+            z-index: 0;
+            opacity: 0.5;
+        }
+        .blob:nth-child(1) { width: 150px; height: 150px; top: -30px; left: -50px; }
+        .blob:nth-child(2) { width: 120px; height: 120px; bottom: -40px; right: -30px; }
+        .blob:nth-child(3) { width: 180px; height: 180px; top: 50px; left: 100px; }
+        h5 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        p {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
