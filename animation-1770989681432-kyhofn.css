@@ -1,29 +1,33 @@
-.feature-card {
-            border-radius: 20px;
-            border: 2px solid transparent;
-            transition: border-color 0.3s ease;
-            background-color: #f8f9fa;
-            padding: 1.5rem;
-            margin: 1rem;
-            position: relative;
-            overflow: hidden;
+body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
         }
-        .feature-card:hover {
-            border-color: #6c757d;
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 190, 190, 0.5);
-            z-index: 0;
-            opacity: 0.5;
+        .button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            outline: none;
         }
-        .blob:nth-child(1) { width: 150px; height: 150px; top: -30px; left: -50px; }
-        .blob:nth-child(2) { width: 120px; height: 120px; bottom: -40px; right: -30px; }
-        .blob:nth-child(3) { width: 180px; height: 180px; top: 50px; left: 100px; }
-        h5 {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+        .button:hover {
+            background: linear-gradient(135deg, #6a6eec, #a8b0fa);
+            transform: translateY(-2px);
         }
-        p {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+        .button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
