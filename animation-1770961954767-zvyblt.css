@@ -1,0 +1,28 @@
+body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+        }
+        .neo-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background-color: #ff4c4c;
+            border: 4px solid black;
+            border-radius: 8px;
+            box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        .neo-button:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.5);
+        }
+        .neo-button:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+        }
