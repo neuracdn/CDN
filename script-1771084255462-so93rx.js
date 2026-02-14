@@ -1,0 +1,1 @@
+(function(){if(!document.querySelector('script[src*="@tailwindcss/browser"]')){const sc=document.createElement("script");sc.src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.18/dist/index.global.js";sc.onload=function(){console.log("Tailwind v4 Loaded ✅");};document.head.appendChild(sc);}})();
