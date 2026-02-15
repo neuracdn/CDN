@@ -1,17 +1,28 @@
-.button {
-      background-color: #4CAF50;
-      color: #fff;
-      padding: 16px 32px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    
-    .button:hover {
-      background-color: #3e8e41;
-    }
-    
-    .button:active {
-      transform: translateY(2px);
-    }
+body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+        }
+        .premium-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+        }
+        .premium-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        .premium-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(0, 123, 255, 0.2);
+        }
