@@ -1,0 +1,44 @@
+body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .cartoon-button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .cartoon-button:hover {
+            transform: translateY(-5px);
+        }
+        .cartoon-button::after {
+            content: '';
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s ease;
+            z-index: 0;
+        }
+        .cartoon-button:hover::after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .cartoon-button span {
+            position: relative;
+            z-index: 1;
+        }
